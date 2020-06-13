@@ -1,0 +1,40 @@
+p {
+    font-size: 110%;
+}
+
+#content{
+    margin: auto;
+    padding-top: 30px;
+    width: 50%;
+    font-family: Open Sans;
+}
+
+#hey{
+    margin-top: 10%;
+    margin-bottom: -5px;
+    font-size: 130%;
+    font-weight: 575;
+}
+
+#heyname {
+    font-family: Oxygen;
+    font-size: 37px;
+    padding:0px;
+    margin: 0px;
+}
+
+#abtme_section {
+    padding: 0 px;
+}
+
+p.general {
+    margin-top: -0px;
+}
+
+h2, h3, h4 {
+    margin-bottom: 0px;
+}
+
+a {
+    color: black;
+}
