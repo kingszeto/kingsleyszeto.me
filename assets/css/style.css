@@ -1,5 +1,14 @@
 p {
     font-size: 110%;
+    margin-top: 0px;
+}
+
+h2, h3, h4 {
+    margin-bottom: 0px;
+}
+
+a{
+    color: black;
 }
 
 #content{
@@ -23,18 +32,50 @@ p {
     margin: 0px;
 }
 
-#abtme_section {
-    padding: 0 px;
+#mail{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    max-height:30px;
+    max-width: 400px;
+    min-height: 50px;
+    overflow: visible;
 }
 
-p.general {
-    margin-top: -0px;
+.cl1{
+    float: left;
+    width: 50%;
 }
 
-h2, h3, h4 {
-    margin-bottom: 0px;
+.cl2{
+    float: left;
+    width: 50%;
 }
 
-a {
-    color: black;
+.cl2right{
+    text-align: right;
+    width: 50%;
+    float: right;
+}
+
+.icon{
+    max-width: 40px;
+    max-width: 40px;
+}
+
+div.resumebox{
+    margin: 0px;
+    padding: 0px;
+}
+
+p.subdescript{
+    font-size: 95%;
+    color: #999999;
+}
+
+ul{
+    list-style: circle;
+}
+
+ul.descript{
+    margin-top: -10px;
 }
