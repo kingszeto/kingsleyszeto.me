@@ -26,12 +26,19 @@
             </div>       
             <div id="aboutme">
                 <h3 style="margin-bottom: -65px;">About Me</h3>
-                <div class="anim-wrapper">                    
-                    <svg class="route" width="500px" height="1000px">
-                        <path stroke="black" fill="none" d="M -33 -150 L 357 250 Q 407 300 407 350 L 407 925"></path>
+                <div class="anim-wrapper" style="top: -281px; left: -527px;">                    
+                    <svg class="route" width="500px" height="100%">
+                        <path stroke="#0039A6" fill="none" d="M -33 -150 L 357 250 Q 407 300 407 350 L 407 1005"></path>
                     </svg>
-                    <div class="train"></div>
+                    <div class="train tr1"></div>
                 </div>
+                
+                <div>
+                    <svg class="route" width="500px" height="100%">
+                        <path stroke="#00933C" fill="none" d="M -570 -150 L -180 250 Q -130 300 -130 350 L -130 805 Q -130 855 -180 905 L -430 1105"></path>
+                    </svg>
+                </div>
+
                 <script src="node_modules/animejs/lib/anime.min.js"></script>
                 <script>
                     var path = anime.path("svg.route path");
@@ -42,14 +49,14 @@
                         translateY: path('y'),
                         rotate: path('angle'),
                         duration: 7500,
-                        targets: 'div.train',
+                        targets: 'div.train.tr1',
                         easing: 'linear',
                         direction: 'alternate',
                         autoplay: true,
                         loop: true,
                         update: function(anim) {
                             var currProgress = Math.round(anim.progress);
-                            if(currProgress == 58 && !isPaused) {
+                            if(currProgress == 54 && !isPaused) {
                                 motionPath.pause();
                                 setTimeout( function() {
                                     isPaused = true;
@@ -57,10 +64,10 @@
                                 },
                                 delayTimer)
                             }
-                            if(currProgress == 57 || currProgress == 59) {
+                            if(currProgress == 53 || currProgress == 55) {
                                 isPaused = false;
                             }
-                            if(currProgress == 88 && !isPaused) {
+                            if(currProgress == 85 && !isPaused) {
                                 motionPath.pause();
                                 setTimeout( function() {
                                     isPaused = true;
@@ -68,7 +75,7 @@
                                 },
                                 delayTimer)
                             }
-                            if(currProgress == 89 || currProgress == 87) {
+                            if(currProgress == 84 || currProgress == 86) {
                                 isPaused = false;
                             }
                             if(currProgress == 100 && !isPaused) {
@@ -85,10 +92,11 @@
                         }
                     });
                 </script>
+                
                 <div class="station" id = "s1">
                     <div class = "inner-stat"></div>
                 </div>
-                <div class="subway-sign">
+                <div class="subway-sign" style="font-size: 53px;">
                     <div class="subway-sign col1">
                         <strong>UC Irvine</strong>
                     </div>
@@ -129,17 +137,26 @@
             <br>
         </div>
         <div id="experience">
-            <h2 style="margin-bottom: -60px;">Involvements</h2>
+            <h2 style="margin-bottom: -35px;">Involvements</h2>
             <div class=resumebox>
                 <div class="station" id = "s1">
                     <div class = "inner-stat"></div>
                 </div>
-                <div class="cl2">
-                    <h3>Hack at UCI</h3>
+                <div class="subway-sign" style="font-size: 43px;">
+                    <div class="subway-sign col1">
+                        <strong>Hack at UCI</strong>
+                    </div>
+                    <div class="subway-sign col2">
+                        <div class="station-mark" style="background-color: #EE352E;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #FCCC0A;"><strong>0</strong></div>
+                        <div class="station-mark" style="background-color: #00933C;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #00933C;"><strong>0</strong></div>
+                        <div class="station-mark" style="background-color: #0039A6;"><strong>N</strong></div>
+                        <div class="station-mark" style="background-color: #0039A6;"><strong>O</strong></div>
+                        <div class="station-mark" style="background-color: #B933AD;"><strong>W</strong></div>
+                    </div>
                 </div>
-                <div class="cl2right">
-                    <em class="misc_right">Mar 2020 - Present</em>
-                </div>
+                <br>
             </div>
             <p class="subdescript">Corporate Outreach Organizer</p>
             <ul class="descript">
@@ -151,12 +168,22 @@
                 <div class="station" id = "s1">
                     <div class = "inner-stat"></div>
                 </div>
-                <div class="cl2">
-                    <h3>UCI Department of Earth Systems Science</h3>
+                <div class="subway-sign" style="font-size: 27px;">
+                    <div class="subway-sign col1">
+                        <strong>UCI Earth Systems</strong>
+                    </div>
+                    <div class="subway-sign col2">
+                        <div class="station-mark" style="background-color: #0039A6;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #0039A6;"><strong>0</strong></div>
+                        <div class="station-mark" style="background-color: #0039A6;"><strong>1</strong></div>
+                        <div class="station-mark" style="background-color: #0039A6;"><strong>9</strong></div>
+                        <div class="station-mark" style="background-color: #C60C30;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #C60C30;"><strong>0</strong></div>
+                        <div class="station-mark" style="background-color: #FF6319;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #A626AA;"><strong>0</strong></div>
+                    </div>
                 </div>
-                <div class="cl2right">
-                    <em class="misc_right">Sep. 2019 - Mar. 2020</em>
-                </div>
+                <br>
             </div>
             <p class="subdescript">Undergraduate Research Assistant</p>
             <ul class="descript">

@@ -75,6 +75,7 @@ a{
 }
 
 div.resumebox{
+    position: relative;
     margin: 0px;
     padding: 0px;
 }
@@ -90,11 +91,6 @@ ul{
 
 ul.descript{
     margin-top: -10px;
-}
-
-svg.route{
-    position: absolute;
-    stroke-width: 10px;
 }
 
 .station{
@@ -120,7 +116,7 @@ svg.route{
 }
 
 #s1{
-    top: 80px;
+    top: 60px;
 }
 
 .train{
@@ -129,11 +125,67 @@ svg.route{
     left: -26px;
     height: 30px;
     width: 50px;
-    background-color: navy;
     z-index: 2;
 }
 
-.anim-wrapper{
+.train.tr1{
+    background-color: #0039A6;
+}
 
-    overflow: hidden;
+.train.tr2{
+    background-color: #00933C;
+}
+
+.anim-wrapper{
+    position: relative;
+    overflow: visible;
+}
+
+svg.route{
+    position: absolute;
+    stroke-width: 10px;
+    overflow: visible;
+}
+
+div.subway-sign{
+    position: relative;
+    background-color: black;
+    font-family: Helvetica;
+    text-align: center;
+    color: white;
+    height: 70px;
+    /* 76% of the height */
+    width: 400px;
+    align-items: center;
+    line-height: 70px;
+    margin-bottom: -15px;
+}
+
+div.subway-sign.col1{
+    width: 66%;
+    float: left;
+}
+
+div.subway-sign.col2{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative;
+    background: transparent;
+    height: 100%;
+    width: 33%;
+    float: left;
+    display: grid;
+    grid-template-columns: 32px 32px 32px 32px;
+    grid-template-rows: 32px 32px;
+    align-items: center;
+}
+
+div.station-mark{
+    text-align: center;
+    font-size: 23px;
+    line-height: 30px;
+    color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;   
 }
