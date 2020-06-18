@@ -17,7 +17,7 @@
     <!-- nothing here for now  -->
     <div id="content">
         <div id="intro">
-            <div id=content-bio>
+            <div id=bio >
                 <p id="hey"> Hey, I'm</p>
                 <p id="heyname"><strong>Kingsley Szeto.</strong></p>
                 <p class="general">This site is still under construction. I'm personalizing it -
@@ -25,7 +25,7 @@
                     a project for Square's Small Business hackathon.</p>
             </div>       
             <div id="aboutme">
-                <h3>About Me</h3>
+                <h3 style="margin-bottom: -65px;">About Me</h3>
                 <div class="anim-wrapper">                    
                     <svg class="route" width="500px" height="1000px">
                         <path stroke="black" fill="none" d="M -33 -150 L 357 250 Q 407 300 407 350 L 407 925"></path>
@@ -49,7 +49,7 @@
                         loop: true,
                         update: function(anim) {
                             var currProgress = Math.round(anim.progress);
-                            if(currProgress == 59 && !isPaused) {
+                            if(currProgress == 58 && !isPaused) {
                                 motionPath.pause();
                                 setTimeout( function() {
                                     isPaused = true;
@@ -57,7 +57,7 @@
                                 },
                                 delayTimer)
                             }
-                            if(currProgress == 60 || currProgress == 58) {
+                            if(currProgress == 57 || currProgress == 59) {
                                 isPaused = false;
                             }
                             if(currProgress == 88 && !isPaused) {
@@ -88,6 +88,20 @@
                 <div class="station" id = "s1">
                     <div class = "inner-stat"></div>
                 </div>
+                <div class="subway-sign">
+                    <div class="subway-sign col1">
+                        <strong>UC Irvine</strong>
+                    </div>
+                    <div class="subway-sign col2">
+                        <div class="station-mark" style="background-color: #EE352E;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #FCCC0A;"><strong>0</strong></div>
+                        <div class="station-mark" style="background-color: #EE352E;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #EE352E;"><strong>2</strong></div>
+                        <div class="station-mark" style="background-color: #0039A6;"><strong>C</strong></div>
+                        <div class="station-mark" style="background-color: #808183;"><strong>S</strong></div>
+                    </div>
+                </div>
+                <br>
                 <p>I'm a junior computer science major with a minor in mathematics at <a href=https://www.ics.uci.edu>UC
                         Irvine</a>, graduating early 2022. I love data, so I've been playing around with AI and Machine
                         Learning, among many other things. But, I enjoy design, art, and other stuff as well (come back
@@ -115,7 +129,7 @@
             <br>
         </div>
         <div id="experience">
-            <h2>Involvements</h2>
+            <h2 style="margin-bottom: -60px;">Involvements</h2>
             <div class=resumebox>
                 <div class="station" id = "s1">
                     <div class = "inner-stat"></div>
