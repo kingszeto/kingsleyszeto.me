@@ -15,8 +15,10 @@ a{
     position: relative;
     margin: auto;
     padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
     /* width: 50%; */
-    width: 900px;
+    width: 850px;
     font-family: Open Sans;
 }
 
@@ -92,21 +94,49 @@ ul.descript{
 
 svg.route{
     position: absolute;
+    stroke-width: 10px;
+}
+
+.station{
+    position: relative;
+    left: -140px;
+    background: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.inner-stat{
+    
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+#s1{
+    top: 80px;
 }
 
 .train{
     position: absolute;
     top: -15px;
-    left: -15px;
+    left: -26px;
     height: 30px;
-    width: 30px;
+    width: 50px;
     background-color: navy;
+    z-index: 2;
 }
 
 .anim-wrapper{
     position: relative;
     left: -20%;
-    top: 50%;
+    top: 50px;
     min-width: auto;
     overflow: clip;
 }
