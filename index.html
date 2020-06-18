@@ -15,8 +15,6 @@
 
 <body>    
     <!-- nothing here for now  -->
-    <div id="navbar"></div>
-    
     <div id="content">
         <div id="intro">
             <div id=content-bio>
@@ -29,13 +27,10 @@
             <div id="aboutme">
                 <h3>About Me</h3>
                 <div class="anim-wrapper">                    
-                    <svg class="route" width="2000" height="1000">
-                        <path stroke="black" fill="none" d="M 50 50 Q 50 200 50 565 "></path>
+                    <svg class="route" width="500px" height="1000px">
+                        <path stroke="black" fill="none" d="M -33 -150 L 357 250 Q 407 300 407 350 L 407 925"></path>
                     </svg>
                     <div class="train"></div>
-                </div>
-                <div class="station" id = "s1">
-                    <div class = "inner-stat"></div>
                 </div>
                 <script src="node_modules/animejs/lib/anime.min.js"></script>
                 <script>
@@ -54,7 +49,7 @@
                         loop: true,
                         update: function(anim) {
                             var currProgress = Math.round(anim.progress);
-                            if(currProgress == 0 && !isPaused) {
+                            if(currProgress == 59 && !isPaused) {
                                 motionPath.pause();
                                 setTimeout( function() {
                                     isPaused = true;
@@ -62,10 +57,10 @@
                                 },
                                 delayTimer)
                             }
-                            if(currProgress == 1) {
+                            if(currProgress == 60 || currProgress == 58) {
                                 isPaused = false;
                             }
-                            if(currProgress == 71 && !isPaused) {
+                            if(currProgress == 88 && !isPaused) {
                                 motionPath.pause();
                                 setTimeout( function() {
                                     isPaused = true;
@@ -73,7 +68,7 @@
                                 },
                                 delayTimer)
                             }
-                            if(currProgress == 72) {
+                            if(currProgress == 89 || currProgress == 87) {
                                 isPaused = false;
                             }
                             if(currProgress == 100 && !isPaused) {
@@ -90,7 +85,9 @@
                         }
                     });
                 </script>
-
+                <div class="station" id = "s1">
+                    <div class = "inner-stat"></div>
+                </div>
                 <p>I'm a junior computer science major with a minor in mathematics at <a href=https://www.ics.uci.edu>UC
                         Irvine</a>, graduating early 2022. I love data, so I've been playing around with AI and Machine
                         Learning, among many other things. But, I enjoy design, art, and other stuff as well (come back
