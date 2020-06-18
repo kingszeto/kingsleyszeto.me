@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "animejs": "^3.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingszeto/kingsleyszeto.me.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Personal",
+    "Website"
+  ],
+  "author": "Kingsley Szeto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingszeto/kingsleyszeto.me/issues"
+  },
+  "homepage": "https://github.com/kingszeto/kingsleyszeto.me#readme"
+}
