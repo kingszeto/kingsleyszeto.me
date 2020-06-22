@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
 </head>
 
 <body>    
@@ -21,27 +22,27 @@
                 <p id="hey"> Hey, I'm</p>
                 <p id="heyname"><strong>Kingsley Szeto.</strong></p>
                 <p class="general">This site is still under construction. I'm personalizing it -
-                    check back soon for the final product! In the meantime, I'm also working on
-                    a project for Square's Small Business hackathon.</p>
+                    check back soon for the final product! As you can tell, I love subways and I hope that the
+                    NYC Metro theme is going well.</p>
             </div>       
             <div id="aboutme">
                 <h3 style="margin-bottom: -65px;">About Me</h3>
                 <div class="anim-wrapper" style="top: -281px; left: -527px;">                    
                     <svg class="route" width="500px" height="100%">
-                        <path stroke="#0039A6" fill="none" d="M -33 -150 L 357 250 Q 407 300 407 350 L 407 1005"></path>
+                        <path class="p1" stroke="#0039A6" fill="none" d="M -33 -150 L 357 250 Q 407 300 407 350 L 407 1015"></path>
                     </svg>
                     <div class="train tr1"></div>
                 </div>
                 
-                <div>
+                <div class="anim-wrapper">
                     <svg class="route" width="500px" height="100%">
-                        <path stroke="#00933C" fill="none" d="M -570 -150 L -180 250 Q -130 300 -130 350 L -130 805 Q -130 855 -180 905 L -430 1105"></path>
+                        <path class="p2" stroke="#00933C" fill="none" d="M -570 -150 L -180 250 Q -130 300 -130 350 L -130 805 Q -130 855 -180 905 L -850 1525"></path>
                     </svg>
+                    <div class="train tr2"></div>
                 </div>
-
-                <script src="node_modules/animejs/lib/anime.min.js"></script>
+                
                 <script>
-                    var path = anime.path("svg.route path");
+                    var path = anime.path("svg.route path.p1");
                     var isPaused = false;
                     var delayTimer = 1000;
                     var motionPath = anime({
@@ -92,7 +93,22 @@
                         }
                     });
                 </script>
-                
+                <script>
+                    var path2 = anime.path("svg.route path.p2");
+                    var isPaused2 = false;
+                    var delayTimer2 = 1000;
+                    var motionPath2 = anime({
+                        translateX: path2('x'),
+                        translateY: path2('y'),
+                        rotate: path2('angle'),
+                        duration: 7500,
+                        targets: 'div.train.tr2',
+                        easing: 'linear',
+                        direction: 'alternate',
+                        autoplay: true,
+                        loop: true
+                    });
+                </script>
                 <div class="station" id = "s1">
                     <div class = "inner-stat"></div>
                 </div>
@@ -184,8 +200,9 @@
                     </div>
                 </div>
                 <br>
+                <p class="subdescript" >Undergraduate Research Assistant</p>
             </div>
-            <p class="subdescript">Undergraduate Research Assistant</p>
+            
             <ul class="descript">
                 <li>Analyzed data on Madden Julian Oscillaions within the West Pacific using Python statistical libraries with the Pritchard Lab.</li>
                 <li>Visualized, compared, and contrasted data from simulated MIT data and open-sourced data from NOAA.</li>
@@ -195,7 +212,7 @@
             <strong>I'm working on personalized images for all of my projects (unless they already have some image). Here's a list of them for now.</strong>
             <h3>In Progress</h5>
             <ul>
-                <li>Project for Square's Small Business Hackathon</li>
+                <li>Project using Square API - I was originally going to make a hackathon project submission, but there is a lot I have to learn before a good app can come out.</li>
                 <li>Project for Atlassian's Codegeist</li>
             </ul>
             <h3>Past Projects</h5>
